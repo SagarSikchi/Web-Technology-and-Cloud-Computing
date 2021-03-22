@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chess Registration Form</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="script" href="./script.js">
+    <style>
+        body {
+            background-image: url(./Images/outer.jpg);
+            padding: 0px;
+            width: 100%;
+            height: 100vh;
+            background-position: center;
+            position: relative;
+        }
+        
+        h1 {
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        label {
+            margin-top: 10px;
+            float: left;
+            width: 250px;
+            height: 30px;
+            font-size: 20px;
+            font-family: "Roboto", sans-serif;
+        }
+        
+        input {
+            margin-left: 50px;
+            margin-top: 10px;
+            margin: 5px;
+            position: relative;
+            height: 30px;
+            align-items: center;
+            vertical-align: middle;
+            font-family: "Noto Sans HK", sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="background-image: url(./Images/inner.jpeg); border: 5px black solid; width: 800px; margin:0 auto; padding: 15px;">
+        <hr>
+        <h1 align="center" style="background-color: aliceblue; font-family: Verdana, Geneva, Tahoma, sans-serif; font-size: 50px; color: rgb(60, 0, 129);">Register at MyChess.com</h1>
+        <hr>
+        <div id="successMsg" style="display:none">Registration Successful...!</div>
+        <div id="errorMsg" style="display:none"></div>
+        <div style="background-color: #dbe0ff;">
+            <form>
+                <fieldset style="color:#7B0834">
+                    <div class="div">
+                        <label for="name">Full Name</label>
+                        <input id="Input" type="text" id="fname" name="name" placeholder="Enter your full name" class="gin" required>
+                        <br>
+                    </div>
+                    <div class="div">
+                        <label for="username">Username</label>
+                        <input id="Input" type="text" id="lname" name="username" placeholder="Enter valid username" class="gin" required>
+                        <br>
+                    </div>
+                    <div class="div">
+                        <label for="email">Email Address</label>
+                        <input id="Input" type="text" name="email" id="email" placeholder="Enter valid email address" class="gin" required>
+                    </div>
+                    <div class="div">
+                        <label for="mobile">Mobile Number</label>
+                        <input id="Input" type="number" name="phno" maxlength="10" id="phno" placeholder="Enter your mobile number" class="gin" required>
+                    </div>
+                    <div class="div">
+                        <label for="mobile">Country</label>
+                        <input id="Input" type="text" name="country" id="country" placeholder="Enter your country" class="gin" required>
+                    </div>
+                    <div class="div" style="font-family: 'Noto Sans HK', sans-serif;">
+                        <label for="gender">Gender </label>
+                        <input type="radio" name="gender" id="male" value="male">Male
+                        <input type="radio" name="gender" id="female" value="female">Female
+                        <input type="radio" name="gender" id="other" value="other">Other
+                    </div>
+                    <div class="div">
+                        <label for="birthday">Date of Birth</label>
+                        <input type="date" id="dob" name="dob" required>
+                    </div>
+                    <div class="div">
+                        <label for="certificate">Upload Chess Certificate</label>
+                        <input type="file" id="certificate" name="certificate">
+                    </div>
+                    <div class="div" style="font-family: 'Noto Sans HK', sans-serif;">
+                        <label for="piece">Favourite Piece</label>
+                        <input type="checkbox" id="p1" class="pieces" name="p1" value="1">
+                        <span class="checkboxes">King</span>
+                        <input type="checkbox" id="p2" class="pieces" name="p2" value="2">
+                        <span class="checkboxes">Queen</span>
+                        <input type="checkbox" id="p3" class="pieces" name="p3" value="3">
+                        <span class="checkboxes">Rook</span>
+                        <input type="checkbox" id="p4" class="pieces" name="p4" value="4">
+                        <span class="checkboxes">Bishop</span>
+                        <input type="checkbox" id="p5" class="pieces" name="p5" value="5">
+                        <span class="checkboxes">Knight</span>
+                        <input type="checkbox" id="p6" class="pieces" name="p6" value="6">
+                        <span class="checkboxes">Pawn</span>
+                    </div>
+                    <div class="div">
+                        <label for="rating">Your Rating (1000 to 2500)</label>
+                        <input id="Input" id="rating" type="range" min="1000" max="2500" value="1500" step="100" name="rating"><br>
+                    </div>
+                    <div class="div">
+                        <label for="level">Chess Level</label>
+                        <select id="level" name="level">
+                            <option value="" selected disabled hidden>Chess Level</option>
+                            <option title="learner">Learner</option>
+                            <option title="beginner">Beginner</option>
+                            <option title="intermediate">Intermediate</option>
+                            <option title="master">Master</option>
+                            <option title="grandmaster">Grand Master</option>
+                        </select><br>
+                    </div>
+                    <div class="div">
+                        <label for="Description">Your Chess Journey</label>
+                        <textarea id="textarea" rows="5" cols="50" name="Description">
+                            Tell us more about your chess journey
+                        </textarea>
+                    </div>
+                    <div class="div">
+                        <label for="password">Password</label>
+                        <input id="password" type="password" placeholder="Enter Password" style="width: 200px;" required>
+                    </div>
+                    <div align="center">
+                        <button id="Button" type="submit" value="Submit">Submit</button>
+                        <button id="Button" type="reset" value="Reset">Reset</button>
+                    </div>
+                </fieldset>
+            </form>
+        </div>
+        <hr>
+    </div>
+</body>
+
+</html>
